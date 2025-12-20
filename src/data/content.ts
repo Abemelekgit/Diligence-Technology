@@ -8,7 +8,7 @@ export const content = {
       phone: "+251 11 618 8888",
       email: "info@diligencetech.et",
       whatsapp: "+251911234567",
-      address: "Addis Ababa, Ethiopia",
+      address: "Nile Source Building, Office No. 901, Africa Avenue, Addis Ababa",
       website: "https://diligencetechnologies.et/",
       linkedin: "https://www.linkedin.com/company/diligence-technologies/",
     },
