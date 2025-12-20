@@ -42,9 +42,11 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">D</span>
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Diligence Technologies Logo" 
+              className="h-10 w-auto"
+            />
             <div className="hidden sm:block">
               <h1 className="text-lg md:text-xl font-bold text-navy leading-tight">
                 Diligence Technologies

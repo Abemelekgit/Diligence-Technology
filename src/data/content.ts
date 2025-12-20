@@ -9,8 +9,8 @@ export const content = {
       email: "info@diligencetech.et",
       whatsapp: "+251911234567",
       address: "Addis Ababa, Ethiopia",
-      website: "www.diligencetech.et",
-      linkedin: "https://www.linkedin.com/company/diligence-technologies",
+      website: "https://diligencetechnologies.et/",
+      linkedin: "https://www.linkedin.com/company/diligence-technologies/",
     },
     metrics: [
       { label: "Founded", value: "2011" },

@@ -11,9 +11,11 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">D</span>
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Diligence Technologies Logo" 
+                className="h-10 w-auto"
+              />
               <div>
                 <h3 className="font-bold text-lg">Diligence Technologies</h3>
                 <p className="text-sm text-gray-300">{content.company.motto}</p>
@@ -60,7 +62,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-2">
                 <FiGlobe className="text-primary mt-1 flex-shrink-0" />
-                <span className="text-gray-300">{content.company.contact.website}</span>
+                <a
+                  href={content.company.contact.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-primary transition-colors"
+                >
+                  {content.company.contact.website}
+                </a>
               </li>
               <li>
                 <a
