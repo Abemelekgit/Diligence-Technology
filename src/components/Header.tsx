@@ -16,7 +16,12 @@ export default function Header() {
   }, []);
 
   const handleDownload = () => {
-    window.open('/Diligence-Technologies-Portfolio.pdf', '_blank');
+    const link = document.createElement('a');
+    link.href = '/pdf/ilovepdf_merged_merged_compressed.pdf';
+    link.download = 'Diligence-Technologies-Portfolio.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const navLinks = [

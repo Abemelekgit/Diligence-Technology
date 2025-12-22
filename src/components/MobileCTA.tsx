@@ -4,7 +4,13 @@ import { content } from '../data/content';
 
 export default function MobileCTA() {
   const handleDownload = () => {
-    window.open('/Diligence-Technologies-Portfolio.pdf', '_blank');
+    const link = document.createElement('a');
+    link.href = '/pdf/ilovepdf_merged_merged_compressed.pdf';
+    link.download = 'Diligence-Technologies-Portfolio.pdf';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   };
 
   return (
