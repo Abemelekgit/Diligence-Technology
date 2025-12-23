@@ -12,6 +12,8 @@ A high-converting, mobile-first advertising landing page optimized for QR code t
 - **Responsive Contact Form**: With validation using react-hook-form and zod
 - **Smooth Animations**: Subtle Framer Motion animations for enhanced UX
 - **SEO Optimized**: Proper meta tags and semantic HTML
+- **Accessibility**: ARIA labels, smooth scrolling, and reduced motion support
+- **Performance Optimized**: useCallback hooks and memoization for optimal rendering
 
 ## 🛠️ Tech Stack
 
