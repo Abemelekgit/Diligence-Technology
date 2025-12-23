@@ -15,6 +15,7 @@ import {
 import { FaWhatsapp } from 'react-icons/fa';
 import { content } from '../data/content';
 import { getStoredUTMParams } from '../lib/utm';
+import { PDF_FILE, PDF_FILENAME, CLIPBOARD_NOTIFICATION_DURATION } from '../constants';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -67,23 +68,23 @@ export default function Contact() {
   const handleCopyEmail = useCallback(() => {
     navigator.clipboard.writeText(content.company.contact.email);
     setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 2000);
+    setTimeout(() => setCopiedEmail(false), CLIPBOARD_NOTIFICATION_DURATION);
   }, []);
 
   const handleCopyPhone = useCallback(() => {
     navigator.clipboard.writeText(content.company.contact.phone);
     setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2000);
+    setTimeout(() => setCopiedPhone(false), CLIPBOARD_NOTIFICATION_DURATION);
   }, []);
 
-  const handleDownload = () => {
+  const handleDownload = useCallback(() => {
     const link = document.createElement('a');
-    link.href = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
-    link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.href = PDF_FILE;
+    link.download = PDF_FILENAME;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }, []);
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-white" aria-label="Contact Us">
