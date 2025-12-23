@@ -2,18 +2,17 @@ import { motion } from 'framer-motion';
 import { useCallback } from 'react';
 import { FiDownload, FiArrowRight, FiCheckCircle } from 'react-icons/fi';
 import { content } from '../data/content';
-
-const PDF_FILE = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+import { PDF_FILE, PDF_FILENAME, SCROLL_CONFIG } from '../constants';
 
 export default function Hero() {
   const handleGetQuote = useCallback(() => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('#contact')?.scrollIntoView(SCROLL_CONFIG);
   }, []);
 
   const handleDownload = useCallback(() => {
     const link = document.createElement('a');
     link.href = PDF_FILE;
-    link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.download = PDF_FILENAME;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
