@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { FiMenu, FiX, FiDownload } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { content } from '../data/content';
+
+const PDF_FILE = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,14 +17,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDownload = () => {
+  const handleDownload = useCallback(() => {
     const link = document.createElement('a');
-    link.href = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.href = PDF_FILE;
     link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }, []);
 
   const navLinks = [
     { label: 'About', href: '#about' },
@@ -31,11 +33,11 @@ export default function Header() {
     { label: 'Contact', href: '#contact' },
   ];
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = useCallback((href: string) => {
     setIsMenuOpen(false);
     const element = document.querySelector(href);
     element?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }, []);
 
   return (
     <header
