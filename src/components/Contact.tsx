@@ -86,7 +86,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white">
+    <section id="contact" className="py-16 md:py-24 bg-white" aria-label="Contact Us">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
