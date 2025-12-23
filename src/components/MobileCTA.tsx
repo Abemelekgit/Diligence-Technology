@@ -2,14 +2,13 @@ import { FiPhone, FiMail, FiDownload } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { useCallback } from 'react';
 import { content } from '../data/content';
-
-const PDF_FILE = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+import { PDF_FILE, PDF_FILENAME } from '../constants';
 
 export default function MobileCTA() {
   const handleDownload = useCallback(() => {
     const link = document.createElement('a');
     link.href = PDF_FILE;
-    link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.download = PDF_FILENAME;
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
