@@ -4,7 +4,7 @@ import { content } from '../data/content';
 
 export default function About() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-white">
+    <section id="about" className="py-16 md:py-24 bg-white" aria-label="About Diligence Technologies">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
