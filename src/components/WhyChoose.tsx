@@ -4,7 +4,7 @@ import { content } from '../data/content';
 
 export default function WhyChoose() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-navy/5">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-navy/5" aria-label="Why Choose Us">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

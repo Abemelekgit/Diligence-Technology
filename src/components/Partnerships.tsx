@@ -4,7 +4,7 @@ import { content } from '../data/content';
 
 export default function Partnerships() {
   return (
-    <section id="partnerships" className="py-16 md:py-24 bg-white">
+    <section id="partnerships" className="py-16 md:py-24 bg-white" aria-label="Strategic Partnerships">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
