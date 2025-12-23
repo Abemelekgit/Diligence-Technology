@@ -2,8 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { FiMenu, FiX, FiDownload } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { content } from '../data/content';
-
-const PDF_FILE = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+import { PDF_FILE, PDF_FILENAME, SCROLL_CONFIG, NAV_LINKS } from '../constants';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +19,7 @@ export default function Header() {
   const handleDownload = useCallback(() => {
     const link = document.createElement('a');
     link.href = PDF_FILE;
-    link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.download = PDF_FILENAME;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -36,7 +35,7 @@ export default function Header() {
   const handleNavClick = useCallback((href: string) => {
     setIsMenuOpen(false);
     const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView(SCROLL_CONFIG);
   }, []);
 
   return (
