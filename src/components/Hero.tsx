@@ -1,20 +1,23 @@
 import { motion } from 'framer-motion';
+import { useCallback } from 'react';
 import { FiDownload, FiArrowRight, FiCheckCircle } from 'react-icons/fi';
 import { content } from '../data/content';
 
-export default function Hero() {
-  const handleGetQuote = () => {
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
+const PDF_FILE = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
 
-  const handleDownload = () => {
+export default function Hero() {
+  const handleGetQuote = useCallback(() => {
+    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
+  const handleDownload = useCallback(() => {
     const link = document.createElement('a');
-    link.href = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.href = PDF_FILE;
     link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
+  }, []);
 
   return (
     <section className="relative bg-gradient-to-br from-navy via-navy to-primary min-h-[85vh] flex items-center pt-20 pb-12 overflow-hidden">
