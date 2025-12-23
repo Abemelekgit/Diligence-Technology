@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -64,17 +64,17 @@ export default function Contact() {
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
-  const handleCopyEmail = () => {
+  const handleCopyEmail = useCallback(() => {
     navigator.clipboard.writeText(content.company.contact.email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
-  };
+  }, []);
 
-  const handleCopyPhone = () => {
+  const handleCopyPhone = useCallback(() => {
     navigator.clipboard.writeText(content.company.contact.phone);
     setCopiedPhone(true);
     setTimeout(() => setCopiedPhone(false), 2000);
-  };
+  }, []);
 
   const handleDownload = () => {
     const link = document.createElement('a');
