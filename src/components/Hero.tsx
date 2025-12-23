@@ -9,8 +9,8 @@ export default function Hero() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/ilovepdf_merged_merged_compressed.pdf';
-    link.download = 'Diligence-Technologies-Portfolio.pdf';
+    link.href = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

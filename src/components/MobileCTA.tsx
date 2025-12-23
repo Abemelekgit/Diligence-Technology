@@ -5,8 +5,8 @@ import { content } from '../data/content';
 export default function MobileCTA() {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/ilovepdf_merged_merged_compressed.pdf';
-    link.download = 'Diligence-Technologies-Portfolio.pdf';
+    link.href = '/EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
+    link.download = 'EXPRESSION OF INTEREST FOR COLLABORATION1.pdf';
     link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
