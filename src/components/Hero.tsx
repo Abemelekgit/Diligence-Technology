@@ -88,6 +88,7 @@ export default function Hero() {
           >
             <button
               onClick={handleGetQuote}
+              aria-label="Get a quote from Diligence Technologies"
               className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-white text-navy px-8 py-4 rounded-lg hover:bg-gray-100 transition-all font-semibold text-lg shadow-xl hover:shadow-2xl hover:scale-105"
             >
               <span>{content.hero.primaryCTA}</span>
@@ -95,6 +96,7 @@ export default function Hero() {
             </button>
             <button
               onClick={handleDownload}
+              aria-label="Download portfolio PDF"
               className="w-full sm:w-auto flex items-center justify-center space-x-2 bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary/90 transition-all font-semibold text-lg border-2 border-white/30 hover:border-white/50"
             >
               <FiDownload className="text-xl" />
