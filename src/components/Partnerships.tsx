@@ -42,6 +42,7 @@ export default function Partnerships() {
                     href={partner.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit ${partner.name} website`}
                     className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-primary/50 transition-all hover:shadow-md group cursor-pointer"
                   >
                     <div className="text-center">
