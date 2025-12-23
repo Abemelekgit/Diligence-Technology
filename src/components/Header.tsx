@@ -58,7 +58,7 @@ export default function Header() {
               <h1 className="text-lg md:text-xl font-bold text-navy leading-tight">
                 Diligence Technologies
               </h1>
-              <p className="text-xs text-gray-600 hidden md:block">{content.company.motto}</p>
+              <p className="text-xs text-gray-600 hidden md:block" aria-hidden="true">{content.company.motto}</p>
             </div>
           </div>
 
