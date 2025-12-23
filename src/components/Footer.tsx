@@ -1,9 +1,9 @@
 import { FiLinkedin, FiMail, FiGlobe, FiMapPin } from 'react-icons/fi';
 import { content } from '../data/content';
+import { NAV_LINKS } from '../constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const navLinks = ['About', 'Services', 'Partnerships', 'Contact'];
 
   return (
     <footer className="bg-navy text-white py-12">
@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
